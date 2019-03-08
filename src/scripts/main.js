@@ -51,10 +51,11 @@
 
 
 
-
+// container from index.html
 
 let container = document.getElementById('foodList');
 
+// function to build innerHTML for objects from database
 function dom(foodObj) {
     let string = `<div>
         <h1>${foodObj.name}</h1> 
@@ -66,7 +67,7 @@ function dom(foodObj) {
     string +=`<p>`
 
 
-
+// looks through ingredients because it was an object in database
     foodObj.ingredients.forEach(ing => {
         string += ing.text + ', '
     })
